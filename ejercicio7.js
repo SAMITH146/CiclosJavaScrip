@@ -1,20 +1,17 @@
-//Crea un diagrama de flujo que lea el nombre y la edad de 5 personas. Solo mostrará
-//en pantalla aquellas personas que tengan 18 años o más.
+//Diseña un diagrama de flujo que sume los números del 1 al 100, pero interrumpa el
+//ciclo si encuentra un número mayor a 90 que sea par.
 
 //inicialización
-let persona = 1;
-//ciclo para 5 personas
-while (persona <= 5) {
-    //pedir nombre y edad
-    let nombre = prompt(`Ingrese el nombre de la persona ${persona}: `);
-    let edad = parseInt(prompt(`Ingrese la edad de ${nombre}: `));
-    //condición para verificar si la persona es mayor de edad
-    if (edad >= 18) {
-        console.log(`${nombre} tiene ${edad} años y es mayor de edad.`);
+let suma = 0;
+let numero = 1;     
+//ciclo para sumar del 1 al 100
+while (numero <= 100) {
+    //condición para verificar si el número es mayor a 90 y par
+    if (numero > 90 && numero % 2 === 0) {
+        console.log(`Se encontró el número ${numero}, que es mayor a 90 y par. Interrumpiendo el ciclo.`);
+        break;
     }
-    //incremento
-    persona++;
+    suma += numero;
+    numero++;
 }
-
-
-
+console.log(`La suma de los números del 1 al ${numero - 1} es: ${suma}.`);
